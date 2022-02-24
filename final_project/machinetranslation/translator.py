@@ -9,14 +9,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-  self.service_api_key=os.environ['apikey']
-        self.service_api_url=os.environ['url']
+apikey = os.environ['apikey']
+url = os.environ['url']
 
-        self.authenticator = IAMAuthenticator(self.service_api_key) #IAM Authenticator Instance
-        self.language_translator=LanguageTranslatorV3(
-                                    version='2018-05-01',
-                                    authenticator=self.authenticator
-                                )
+authenticator = IAMAuthenticator('1ZMEz1Ao6_0c01LmmcQC3V5gkwgM3NlEJGWk2Zg3LAQB')
+language_translator = LanguageTranslatorV3(
+    version='5.3.1',
+    authenticator=authenticator
+)
 
 language_translator.set_service_url('https://api.us-south.language-translator.watson.cloud.ibm.com')
 
